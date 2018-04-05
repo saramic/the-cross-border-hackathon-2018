@@ -6,14 +6,14 @@ Assuming an `NAB_SANDBOX_API_KEY` is present and `curl` and `jq` are installed.
 
 Get current transfer rates
 
-  ```
+  ```sh
   curl -H "x-nab-key:${NAB_SANDBOX_API_KEY}" https://sandbox.api.nab/v2/fxrates?v=1 \
     | jq ".[].fxRates[] | select(.buyCurrency==\"CNY\" or .buyCurrency==\"RMB\" or .buyCurrency==\"NZD\")"
   ```
 
   returns NZD and CNY suggesting that they do not support RMB
 
-  ```
+  ```json
   {
     "buyCurrency": "NZD",
     "sellCurrency": "AUD",
@@ -38,12 +38,12 @@ Also the only `sellCurrency` is `AUD`
 
 get 2,939 **ATM** locations all at once
 
-  ```{sh}
+  ```sh
   curl -H "x-nab-key:${NAB_SANDBOX_API_KEY}" 'https://sandbox.api.nab/v2/locations?locationType=atm&v=1'
   ```
 
   returns
-  ```{json}
+  ```json
   {
     "locationSearchResponse" : {
       "totalRecords" : 2939,
