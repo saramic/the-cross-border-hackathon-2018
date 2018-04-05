@@ -2,6 +2,24 @@
 
 Assuming an `NAB_SANDBOX_API_KEY` is present and `curl` and `jq` are installed.
 
+# Extra NAB APIs
+
+More API's are coming Friday 13th April. In the mean time here are some from
+previous NAB hackathons https://hackathon-docs.api.extnp.nab.com.au/
+
+  - Authentication - login and password APIs
+  - Accounting Packages - Xero integration?
+  - Device - device and passcode managment?
+  - Application - application initialisation?
+  - Token Management - tokens for who?
+  - Banking - list of accounts, cards, account balance
+  - Health - submit a claim, update health loyalty status?
+  - Forms - ?
+  - Public - claims?
+  - Support - log messages, errors, info, etc?
+  - Tracker - application process status? solicitor and settlement details?
+    home loans?
+
 # NAB OAuth 2.0 and Accounts
 
   - [ ] get this working
