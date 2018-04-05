@@ -2,6 +2,18 @@
 
 Assuming an `NAB_SANDBOX_API_KEY` is present and `curl` and `jq` are installed.
 
+# NAB OAuth 2.0 and Accounts
+
+  - [ ] get this working
+
+  this does NOT WORK
+
+  ```
+  curl "https://developer.nab.com.au/common/oauth-registration?scope=accounts&client_id=${NAB_SANDBOX_API_KEY}&redirect_uri=http://example.com"
+  ```
+
+  presumably we need a real redirect URL? more info at https://developer.nab.com.au/docs#using-oauth-with-the-sandbox-environment
+
 # NAB fx-rates
 
 Get current transfer rates
