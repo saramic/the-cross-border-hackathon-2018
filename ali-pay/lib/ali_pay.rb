@@ -27,7 +27,10 @@ class AliPay
                  quantity: nil,
                  show_url: nil,
                  timestamp: nil,
-                 trans_currency: nil
+                 trans_currency: nil,
+                 out_trade_no: nil,
+                 seller_email: nil,
+                 sendFormat: nil
                 )
     @_input_charset = _input_charset
     @extend_params = extend_params
@@ -37,10 +40,13 @@ class AliPay
     @show_url = show_url
     @timestamp = timestamp
     @trans_currency = trans_currency
+    @out_trade_no = out_trade_no
+    @seller_email = seller_email
+    @sendFormat = sendFormat
   end
 
-  def md5_sign
-    query_params = {
+  def query_params
+    params = {
       "_input_charset"      => @_input_charset,
       "body"                => "iphone cellphone",
       "currency"            => "USD",
@@ -51,50 +57,28 @@ class AliPay
       "price"               => @price,
       "product_code"        => "OVERSEAS_MBARCODE_PAY",
       "quantity"            => @quantity,
-      "seller_email"        => "testoverseas1980@alipay.com",
+      "seller_email"        => @seller_email,
       "seller_id"           => PARTNER,
       "service"             => "alipay.acquire.precreate",
       "show_url"            => @show_url,
       "subject"             => "Payment by QR-Code",
-      "timestamp"           => @timestamp,
       "total_fee"           => @price, #(@price.to_d * @quantity).to_s,
       "trans_currency"      => @trans_currency
     }
+    params = params.merge("timestamp" => @timestamp) if @timestamp
+    params = params.merge("out_trade_no" => @out_trade_no) if @out_trade_no
+    params = params.merge("sendFormat" => @sendFormat) if @sendFormat
+    params
+  end
+
+  def md5_sign
     query_params_string = hash_to_sorted_query_params(query_params)
     Digest::MD5.hexdigest(query_params_string + PARTNER_KEY)
   end
 
   def pay_url
-    extended_parameters = {
-      "secondary_merchant_name"     => "Lotte",
-      "secondary_merchant_id"       => "123",
-      "secondary_merchant_industry" => "5812",
-      "store_id"                    => "A101",
-      "store_name"                  => "McDonald in 966 3rd Ave, New York"
-    }
-    query_params = {
-      "_input_charset"      => "UTF-8",
-      "body"                => "iphone cellphone",
-      "currency"            => "USD",
-      "extend_params"       => extended_parameters.to_json,
-      "notify_url"          => "http://api.test.alipay.net/atinterface/receive_notify.htm",
-      "out_trade_no"        => "4363476566647440",
-      "partner"             => PARTNER,
-      "passback_parameters" => "test",
-      "price"               => "0.01",
-      "product_code"        => "OVERSEAS_MBARCODE_PAY",
-      "quantity"            => "1",
-      "seller_email"        => " testoverseas1980@alipay.com",
-      "seller_id"           => PARTNER,
-      "sendFormat"          => "normal",
-      "service"             => "alipay.acquire.precreate",
-      "show_url"            => "http://www.taobao.com/product/113714.html",
-      "subject"             => "Payment by QR-Code",
-      "total_fee"           => "0.01",
-      "trans_currency"      => "USD"
-    }
     query_params_string = hash_to_sorted_query_params(query_params)
-    query_params_string = [query_params_string, "sign=2127020ad640f41eec725c639f1de294"].join('&')
+    query_params_string = [query_params_string, "sign=#{md5_sign}"].join('&')
     # TODO use proper URI or CGI to create query params
     [HTTPS_REQUEST_URL, query_params_string].join('?')
   end
