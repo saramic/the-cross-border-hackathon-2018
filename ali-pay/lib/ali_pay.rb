@@ -7,18 +7,7 @@ class AliPay
   PARTNER = '2088021966388155'
   PARTNER_KEY = 'w0nu2sn0o97s8ruzrpj64fgc8vj8wus6'
   HTTPS_REQUEST_URL = 'https://intlmapi.alipay.com/gateway.do' # production
-
-  PARAMS = {
-    "service"       => "create_forex_trade",
-    "partner"       => "2088101568338364",
-    "_input_charset"=> "gbk",
-    "return_url"    => "http://www.test.com/alipay/return_url.asp",
-    "out_trade_no"  => "6741334835157966",
-    "subject"       => "test",
-    "payment_type"  => "1",
-    "seller_email"  => "alipay-test01@alipay.com",
-    "total_fee"     => "100"
-  }
+  #HTTPS_REQUEST_URL = 'https://openapi.alipaydev.com/gateway.do' # test
 
   def initialize(_input_charset: nil,
                  extend_params: nil,
@@ -81,11 +70,6 @@ class AliPay
     query_params_string = [query_params_string, "sign=#{md5_sign}"].join('&')
     # TODO use proper URI or CGI to create query params
     [HTTPS_REQUEST_URL, query_params_string].join('?')
-  end
-
-
-  def pay
-    hash_to_sorted_query_params(PARAMS)
   end
 
   private
