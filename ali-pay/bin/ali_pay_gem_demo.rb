@@ -34,13 +34,13 @@ EOF
 # set up a client to talk to the Alipay API
 @client = Alipay::Client.new(
   url: API_URL,
-  app_id: APP_ID,
+  partner_id: APP_ID,
   app_private_key: APP_PRIVATE_KEY,
   alipay_public_key: ALIPAY_PUBLIC_KEY
 )
 
 response = @client.execute(
-  method: 'alipay.trade.precreate',
+  method: 'alipay.acquire.precreate',
   notify_url: 'https://mystore.com/orders/20160401000000/notify',
   biz_content: {
     out_trade_no: '20160401000000',
