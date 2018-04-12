@@ -172,8 +172,14 @@ GEM
     recipient_interceptor (0.1.2)
       mail
     refills (0.2.0)
+    rspec (3.7.0)
+      rspec-core (~> 3.7.0)
+      rspec-expectations (~> 3.7.0)
+      rspec-mocks (~> 3.7.0)
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
+    rspec-example_steps (3.0.2)
+      rspec-core (>= 3.0.0)
     rspec-expectations (3.7.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
@@ -189,6 +195,8 @@ GEM
       rspec-mocks (~> 3.7.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
+    rspec-wait (0.0.9)
+      rspec (>= 3, < 4)
     ruby_dep (1.5.0)
     safe_yaml (1.0.4)
     sass (3.5.6)
@@ -284,7 +292,9 @@ DEPENDENCIES
   rails (~> 5.1.4)
   recipient_interceptor
   refills
+  rspec-example_steps
   rspec-rails (~> 3.6)
+  rspec-wait
   sass-rails (~> 5.0)
   shoulda-matchers
   simple_form
