@@ -54,6 +54,22 @@ Hackathon site is http://thecrossborder.stoneandchalk.com.au/
     http://localhost:3000/graphql
   ```
 
+## TODO
+
+  **Michael**
+  - [ ] add react.js
+  - [ ] link react to graphql
+  - [ ] move the basic alipay attempt into the rails app
+
+  **Untaken**
+  - [ ] flesh out the flow [postcard_holidays_spec.rb](/spec/features/lifecycle_flows/postcard_holidays_spec.rb)
+    to include all the actors like the holiday providers and our own app as
+    well as a populated image search etc
+  - [ ] add ember.js?
+  - [ ] add styling, bootstrap?
+  - [ ] deploy to Ali cloud
+  - [ ] look into data from [Australian Tourism Data Warehouse](https://atdw.com.au/)
+
 ## Resources
 
   * common chinese names http://www.theworldofchinese.com/2014/07/the-most-popular-names-in-china-not-a-john-smith-in-sight/
