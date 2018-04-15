@@ -2,17 +2,8 @@ class Request
   class << self
     def where(resource_path, cache_params, query = {}, options = {})
       response, status = get_json(resource_path, cache_params, query)
-      status == 200 ? response : errors(response)
-    end
-
-    def get(id)
-      response, status = get_json(id)
-      status == 200 ? response : errors(response)
-    end
-
-    def errors(response)
-      error = { errors: { status: response["status"], message: response["message"] } }
-      response.merge(error)
+      raise ArgumentError.new(response) unless status == 200
+      response
     end
 
     def get_json(root_path, cache_params, query = {})
