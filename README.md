@@ -20,3 +20,15 @@ Hackathon site is http://thecrossborder.stoneandchalk.com.au/
   Australian services (including financial services) when traveling and seeking
   to establish themselves in Australia. How can we use APIs from NAB, Alibaba
   and other third parties to help?
+
+## Approach
+
+  * write a highlevel lifecycle flow as an acceptance spec
+  * implement as hardcoded pages
+  * style to make believeable
+  * build out style/UX/API where greatest value can be demonstrated
+
+## Resources
+
+  * common chinese names http://www.theworldofchinese.com/2014/07/the-most-popular-names-in-china-not-a-john-smith-in-sight/
+
