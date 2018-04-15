@@ -28,6 +28,32 @@ Hackathon site is http://thecrossborder.stoneandchalk.com.au/
   * style to make believeable
   * build out style/UX/API where greatest value can be demonstrated
 
+## Dev setup
+
+    ```sh
+    bundle
+    rails server
+
+    # this will follow the current flow
+    open http://localhost:3000
+
+    # test the same flow
+    rspec
+
+    # hit the fx-rates NAB api
+    open http://localhost:3000/fx-rates
+    open http://localhost:3000/fx-rates/CNY
+
+    # hit the GraphiQL frontend
+    open http://localhost:3000/graphiql
+
+    # run a curl query against the GraphQL endpoint
+    curl -X POST                                                              \
+      -H "Content-Type: application/json"                                     \
+      --data '{ "query": "{ fx_rates { buy_currency current_buy_rate } }" }'  \
+      http://localhost:3000/graphql
+    ```
+
 ## Resources
 
   * common chinese names http://www.theworldofchinese.com/2014/07/the-most-popular-names-in-china-not-a-john-smith-in-sight/
