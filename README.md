@@ -30,29 +30,29 @@ Hackathon site is http://thecrossborder.stoneandchalk.com.au/
 
 ## Dev setup
 
-    ```sh
-    bundle
-    rails server
+  ```sh
+  bundle
+  rails server
 
-    # this will follow the current flow
-    open http://localhost:3000
+  # this will follow the current flow
+  open http://localhost:3000
 
-    # test the same flow
-    rspec
+  # test the same flow
+  rspec
 
-    # hit the fx-rates NAB api
-    open http://localhost:3000/fx-rates
-    open http://localhost:3000/fx-rates/CNY
+  # hit the fx-rates NAB api
+  open http://localhost:3000/fx-rates
+  open http://localhost:3000/fx-rates/CNY
 
-    # hit the GraphiQL frontend
-    open http://localhost:3000/graphiql
+  # hit the GraphiQL frontend
+  open http://localhost:3000/graphiql
 
-    # run a curl query against the GraphQL endpoint
-    curl -X POST                                                              \
-      -H "Content-Type: application/json"                                     \
-      --data '{ "query": "{ fx_rates { buy_currency current_buy_rate } }" }'  \
-      http://localhost:3000/graphql
-    ```
+  # run a curl query against the GraphQL endpoint
+  curl -X POST                                                              \
+    -H "Content-Type: application/json"                                     \
+    --data '{ "query": "{ fx_rates { buy_currency current_buy_rate } }" }'  \
+    http://localhost:3000/graphql
+  ```
 
 ## Resources
 
