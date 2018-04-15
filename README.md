@@ -60,6 +60,8 @@ Hackathon site is http://thecrossborder.stoneandchalk.com.au/
   - [ ] add react.js
   - [ ] link react to graphql
   - [ ] move the basic alipay attempt into the rails app
+  - [ ] add graphQL _queries with arguments_
+    following [how to implement graphql in rails](https://blog.codeship.com/how-to-implement-a-graphql-api-in-rails/)
 
   **Untaken**
   - [ ] flesh out the flow [postcard_holidays_spec.rb](/spec/features/lifecycle_flows/postcard_holidays_spec.rb)
@@ -67,8 +69,35 @@ Hackathon site is http://thecrossborder.stoneandchalk.com.au/
     well as a populated image search etc
   - [ ] add ember.js?
   - [ ] add styling, bootstrap?
+    - styling
+      [China web design trends 2015](https://www.smashingmagazine.com/2015/02/china-web-design-trends-2015/)
   - [ ] deploy to Ali cloud
   - [ ] look into data from [Australian Tourism Data Warehouse](https://atdw.com.au/)
+  - [ ] prep for hackathon [NAB apis](https://hackathon-docs.api.extnp.nab.com.au/) presumably not working till the weekend?
+  - [ ] fix the error handling of NAB api requests
+  - [ ] get the `protect_from_forgery` issue with graphql sorted [commit 3f472ff](https://github.com/saramic/the-cross-border-hackathon-2018/commit/3f472ff7e06df1746c65fac5383006fcbffd3a7d)
+    - https://nvisium.com/resources/blog/2014/09/10/understanding-protectfromforgery.html
+  - [ ] anything else to update to the way we use service object to fetch APIs
+    - [Service Objects in Ruby on Rails…and you](https://hackernoon.com/service-objects-in-ruby-on-rails-and-you-79ca8a1c946e)
+    - [USING SERVICES TO KEEP YOUR RAILS CONTROLLERS CLEAN AND DRY](https://www.engineyard.com/blog/keeping-your-rails-controllers-dry-with-services)
+  - [ ] anything more on rails and graphql setup
+    - [Building a GraphQL API in Rails — Part 1](https://medium.com/@DrawandCode/building-a-graphql-api-in-rails-part-1-a40aaf7e165f)
+    - [Building a GraphQL API in Rails — Part 2: Start Coding](https://medium.com/@DrawandCode/building-a-graphql-api-in-rails-part-start-coding-8b1de6d75041)
+    - https://github.com/rmosolgo/graphql-ruby
+    - [graphql-ruby Tutorial - Introduction](https://www.howtographql.com/graphql-ruby/0-introduction/)
+    - [Public GraphQL APIs](https://github.com/APIs-guru/graphql-apis)
+  - [ ] what to learn from twitter users who seem to follow this hackathon
+    - https://twitter.com/alibaba_cloud
+    - https://twitter.com/NAB
+    - https://twitter.com/stoneandchalk
+    - https://twitter.com/alantsen
+    - https://twitter.com/SmallTimeVC
+    - https://twitter.com/philipdalidakis
+    - https://twitter.com/nomisruption
+    - https://twitter.com/Matt_Cenin
+    - https://twitter.com/SarahGrace84
+    - https://twitter.com/codeCrypto coder
+    - https://twitter.com/felicia_coco
 
 ## Resources
 
