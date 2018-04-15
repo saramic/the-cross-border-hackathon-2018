@@ -23,6 +23,9 @@ gem "suspenders"
 gem "title"
 gem "uglifier"
 
+# as part of integrating 3rd party API into Rails 5
+# https://revs.runtime-revolution.com/integrating-a-third-party-api-with-rails-5-134f960ddbba
+gem 'faraday'
 
 group :development do
   gem "listen"
