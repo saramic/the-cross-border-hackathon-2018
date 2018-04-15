@@ -1,0 +1,11 @@
+<% if @errors %>
+  <%= render "errors", object: @errors %>
+<% else %>
+  <div>
+    <strong>last updated at</strong>
+    <%= @fx_rates.last_updated_date %>
+  </div>
+  <%- @fx_rates.fx_rates.each do |fx_rate| -%>
+    <%= render partial: "fx_rate", locals: { fx_rate: fx_rate } %>
+  <%- end -%>
+<% end %>

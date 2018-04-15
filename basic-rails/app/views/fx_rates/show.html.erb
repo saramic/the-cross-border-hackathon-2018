@@ -1,0 +1,5 @@
+<% if @errors %>
+  <%= render "errors", object: @errors %>
+<% else %>
+  <%= render partial: "fx_rate", locals: { fx_rate: @fx_rate } %>
+<% end %>

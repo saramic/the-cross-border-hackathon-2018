@@ -23,8 +23,8 @@ module NabSandbox
       response = Request.where('fxrates?v=1')
       fx_rates_response = response.fetch('fxRatesResponse')
       fx_rates = FxRates.new(fx_rates_response["fxRates"], fx_rates_response["lastUpdatedDate"])
-      [ fx_rates, response["status"] ]
-      #[ response["status"] ]
+      errors = response["status"] unless response["status"]["code"] == 'API-200'
+      [ fx_rates, errors ]
     end
 
     def initialize(fx_rates, last_updated_date)
