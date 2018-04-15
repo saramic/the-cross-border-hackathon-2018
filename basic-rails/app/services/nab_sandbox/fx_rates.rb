@@ -19,8 +19,12 @@ module NabSandbox
     #   "code" : "API-200",
     #   "message" : "Success"
     # }
-    def self.fetch
-      response = Request.where('fxrates?v=1')
+
+    CACHE_DEFAULTS = { expires_in: 7.days, force: false }
+
+    def self.fetch(clear_cache)
+      cache = CACHE_DEFAULTS.merge({ force: clear_cache })
+      response = Request.where('fxrates?v=1', cache)
       fx_rates_response = response.fetch('fxRatesResponse')
       fx_rates = FxRates.new(fx_rates_response["fxRates"], fx_rates_response["lastUpdatedDate"])
       errors = response["status"] unless response["status"]["code"] == 'API-200'
