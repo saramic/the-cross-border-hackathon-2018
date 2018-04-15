@@ -93,6 +93,10 @@ GEM
       i18n
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    graphiql-rails (1.4.10)
+      railties
+      sprockets-rails
+    graphql (1.7.14)
     hashdiff (0.3.7)
     high_voltage (3.0.0)
     honeybadger (3.3.0)
@@ -280,6 +284,8 @@ DEPENDENCIES
   faraday
   flutie
   formulaic
+  graphiql-rails
+  graphql
   high_voltage
   honeybadger
   jquery-rails

@@ -27,6 +27,11 @@ gem "uglifier"
 # https://revs.runtime-revolution.com/integrating-a-third-party-api-with-rails-5-134f960ddbba
 gem 'faraday'
 
+# add graphql
+# as described in https://blog.codeship.com/how-to-implement-a-graphql-api-in-rails/
+gem 'graphql'
+gem 'graphiql-rails', group: :development
+
 group :development do
   gem "listen"
   gem "rack-mini-profiler", require: false
@@ -66,3 +71,4 @@ gem 'shoulda-matchers', group: :test
 gem 'capybara-webkit', group: :test
 gem 'simple_form'
 gem 'bullet', group: [:development, :test]
+
