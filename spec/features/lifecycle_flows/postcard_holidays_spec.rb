@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Lifecycle flow for a postcard holiday' do
+feature 'Lifecycle flow for a postcard holiday', js: true do
   Steps 'A Chinese national goes on a holiday inspired by postcards from a friend' do
 
     When 'Li Jing(李静) receives a message from her friend Zhang Wei(张伟)' do
