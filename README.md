@@ -71,6 +71,8 @@ Hackathon site is http://thecrossborder.stoneandchalk.com.au/
   - [ ] add styling, bootstrap?
     - styling
       [China web design trends 2015](https://www.smashingmagazine.com/2015/02/china-web-design-trends-2015/)
+    - content placeholder (aka spinner) animated shimmer on content blocks
+      [FB content placeholder deconstruction](https://cloudcannon.com/deconstructions/2014/11/15/facebook-content-placeholder-deconstruction.html)
   - [ ] deploy to Ali cloud
   - [ ] look into data from [Australian Tourism Data Warehouse](https://atdw.com.au/)
   - [ ] prep for hackathon [NAB apis](https://hackathon-docs.api.extnp.nab.com.au/) presumably not working till the weekend?
