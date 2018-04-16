@@ -40,6 +40,7 @@ gem 'jquery-rails'
 #   following https://learnetto.com/blog/3-ways-to-use-react-with-ruby-on-rails-5
 #   based on https://github.com/shakacode/react_on_rails
 gem "react_on_rails", "~> 6"
+gem 'mini_racer', platforms: :ruby
 
 group :development do
   gem "listen"
