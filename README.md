@@ -54,6 +54,16 @@ Hackathon site is http://thecrossborder.stoneandchalk.com.au/
     http://localhost:3000/graphql
   ```
 
+  React JS
+
+  ```
+  # assuming foreman is installed
+  gem install foreman
+
+  foreman start -f Procfile.dev -e .env,.env.local
+  open http://localhost:3000/hello_world
+  ```
+
 ## TODO
 
   **Michael**
