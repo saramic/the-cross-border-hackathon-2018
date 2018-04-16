@@ -31,6 +31,10 @@ Hackathon site is http://thecrossborder.stoneandchalk.com.au/
 ## Dev setup
 
   ```sh
+  # install QT
+  brew install qt@5.5
+  echo 'export PATH="$(brew --prefix qt@5.5)/bin:$PATH"' >> ~/.bashrc
+
   bundle
   rails server
 
