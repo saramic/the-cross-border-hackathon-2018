@@ -36,6 +36,11 @@ gem 'graphiql-rails', group: :development
 gem 'bootstrap', '~> 4.1.0'
 gem 'jquery-rails'
 
+# react
+#   following https://learnetto.com/blog/3-ways-to-use-react-with-ruby-on-rails-5
+#   based on https://github.com/shakacode/react_on_rails
+gem "react_on_rails", "~> 6"
+
 group :development do
   gem "listen"
   gem "rack-mini-profiler", require: false
