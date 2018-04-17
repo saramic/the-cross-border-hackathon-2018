@@ -1,0 +1,77 @@
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">Postcard Holidays - Demo</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <%= link_to "Home", root_path, class: [:'nav-link'] %>
+        <%= link_to "About", page_path('about'), class: [:'nav-link'] %>
+        <%= link_to "Value", page_path('value'), class: [:'nav-link'] %>
+        <%= link_to "Demo", page_path('demo'), class: [:'nav-link', :active] %>
+      </nav>
+    </div>
+  </header>
+
+  <div class="row mb-2">
+    <div class="col-md-10">
+      <h3>Zhang Wei(张伟)</h3>
+      <p>Hey, how has life been when I was away in Australia on my holiday!</p>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+      <h3 class="text-right">Li Jing(李静)</h3>
+      <p class="text-right">Ok, lol, how was the holiday?</p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-10">
+      <h3>Zhang Wei(张伟)</h3>
+      <p>Yeah, great, Australia is unbelievable</p>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+      <h3 class="text-right">Li Jing(李静)</h3>
+      <p class="text-right">any photos?</p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-10">
+      <h3>Zhang Wei(张伟)</h3>
+      <p>check these out, they are as pretty as postcards</p>
+      <br />IMAGE 1
+      <br />IMAGE 2
+      <br />IMAGE 3
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+      <h3 class="text-right">Li Jing(李静)</h3>
+      <p class="text-right">Oh wow, I wish I could wave a magic wand and go on such a postcard holiday as well</p>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-md-12">
+      <p class="lead">
+        <%= link_to "What happens next?", page_path('postcards'), class: [:btn, :'btn-lg', :'btn-secondary'] %>
+      </p>
+    </div>
+  </div>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p></p>
+    </div>
+  </footer>
+</div>

@@ -1,17 +1,62 @@
 require 'rails_helper'
 
-feature 'Lifecycle flow for a postcard holiday', js: true do
+feature 'Lifecycle flow for a postcard holiday' do
   Steps 'A Chinese national goes on a holiday inspired by postcards from a friend' do
-
-    When 'Li Jing(李静) receives a message from her friend Zhang Wei(张伟)' do
+    Given 'a postcard holiday site exists' do
       visit root_path
-      click_link 'new message'
+      wait_for { page }.to have_content('Welcome to Postcard Holidays')
     end
 
-    Then "she sees 3 postcard images from Zhang Wei's recent holiday to Australia" do
-      wait_for { page }.to have_content('postcard 1')
-      wait_for { page }.to have_content('postcard 2')
-      wait_for { page }.to have_content('postcard 3')
+    When 'Alan Tsen is wanting to know about our idea' do
+      click_link "let's get started"
+    end
+
+    Then 'we have a comprehensive message about the dev team' do
+      wait_for { page }.to have_content('Development Team')
+      wait_for { page }.to have_content('Jake Barber')
+      wait_for { page }.to have_content('Tianqi Chen')
+      wait_for { page }.to have_content('Gary Manche')
+      wait_for { page }.to have_content('Michael Milewski')
+      wait_for { page }.to have_content('Selena Small')
+    end
+
+    And 'what we have managed to build' do
+      wait_for { page }.to have_content('The build')
+      wait_for { page }.to have_content('Payment transfer system')
+    end
+
+    And 'which of the many useful partner resources we have used' do
+      wait_for { page }.to have_content('Partners')
+      wait_for { page }.to have_content('NAB')
+      wait_for { page }.to have_content('Alipay')
+      wait_for { page }.to have_content('Ali cloud')
+    end
+
+    When 'Alan Tsen continues to find out about our value proposition' do
+      click_link "The value proposition"
+    end
+
+    Then """there is a compelling story of Australian natural opportunities,
+            tourist operators who provide unsurpassed service,
+            Chinese inquisitivness spreading globally,
+            and modern economy partners who reduce spend and waste""" do
+      wait_for { page }.to have_content('Austrlia')
+      wait_for { page }.to have_content('China')
+      wait_for { page }.to have_content('Tourism Operators')
+      wait_for { page }.to have_content('Modern Economy Partners')
+    end
+
+    When 'Alan Tsen asks how it all works' do
+      click_link "Show me a demo"
+    end
+
+    Then 'a convincing "soci net" engagment takes place about Zhang Wei(张伟) trip to Australia and his friend li jing(李静)' do
+      wait_for { page }.to have_content('Yeah, great, Australia is unbelievable')
+      wait_for { page }.to have_content('go on such a postcard holiday as well')
+    end
+
+    When "li jing(李静) want's to find out what will happen next" do
+      click_link 'What happens next?'
     end
 
     When 'Li Jing submits these postcard images to postcard holiday' do

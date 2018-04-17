@@ -1,0 +1,75 @@
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">Postcard Holidays</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <%= link_to "Home", root_path, class: [:'nav-link'] %>
+        <%= link_to "About", page_path('about'), class: [:'nav-link'] %>
+        <%= link_to "Value", page_path('value'), class: [:'nav-link', :active] %>
+        <%= link_to "Demo", page_path('demo'), class: [:'nav-link'] %>
+      </nav>
+    </div>
+  </header>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <h3>Austrlia</h3>
+      <ul>
+        <li>natural beauty</li>
+        <li>open spaces</li>
+        <li>amazing creatures</li>
+        <li>fresh air</li>
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+      <h3>China</h3>
+      <ul>
+        <li>Growning middle class</li>
+        <li>Geographicaly close to Australia</li>
+        <li>World travellers</li>
+        <li>Looking for exeriences</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <h3>Tourism Operators</h3>
+      <ul>
+        <li>Know how to create amazing holiday experiences</li>
+        <li>Limited in technology</li>
+        <li>Prefer credit card for payment options</li>
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+      <h3>Modern Economy Partners</h3>
+      <ul>
+        <li>NAB</li>
+        <li>Alipay</li>
+        <li>QR codes</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-12">
+      <p class="lead">
+        <%= link_to "Show me a demo", page_path('demo'), class: [:btn, :'btn-lg', :'btn-secondary'] %>
+      </p>
+    </div>
+  </div>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p></p>
+    </div>
+  </footer>
+</div>
