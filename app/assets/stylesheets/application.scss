@@ -7,3 +7,6 @@
 
 @import "base/base";
 @import "refills/flashes";
+
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";

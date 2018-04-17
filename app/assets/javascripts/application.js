@@ -12,3 +12,9 @@
 //
 //= require rails-ujs
 //= require_tree .
+//
+//= require jquery3
+//= require popper
+//= require bootstrap
+// slower compilation but provides individual bootstrap components for ease of debugging
+//  require bootstrap-sprockets

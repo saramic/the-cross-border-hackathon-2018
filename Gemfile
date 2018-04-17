@@ -32,6 +32,10 @@ gem 'faraday'
 gem 'graphql'
 gem 'graphiql-rails', group: :development
 
+# bootstrap for styles
+gem 'bootstrap', '~> 4.1.0'
+gem 'jquery-rails'
+
 group :development do
   gem "listen"
   gem "rack-mini-profiler", require: false
