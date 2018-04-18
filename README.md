@@ -41,8 +41,8 @@ Hackathon site is http://thecrossborder.stoneandchalk.com.au/
   rspec
 
   # hit the fx-rates NAB api
-  open http://localhost:3000/fx-rates
-  open http://localhost:3000/fx-rates/CNY
+  open http://localhost:3000/fx_rates
+  open http://localhost:3000/fx_rates/CNY
 
   # hit the GraphiQL frontend
   open http://localhost:3000/graphiql

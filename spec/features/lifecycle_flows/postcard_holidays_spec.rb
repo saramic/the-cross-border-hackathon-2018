@@ -40,7 +40,7 @@ feature 'Lifecycle flow for a postcard holiday' do
             tourist operators who provide unsurpassed service,
             Chinese inquisitivness spreading globally,
             and modern economy partners who reduce spend and waste""" do
-      wait_for { page }.to have_content('Austrlia')
+      wait_for { page }.to have_content('Australia')
       wait_for { page }.to have_content('China')
       wait_for { page }.to have_content('Tourism Operators')
       wait_for { page }.to have_content('Modern Economy Partners')
