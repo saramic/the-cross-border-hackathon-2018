@@ -7,6 +7,10 @@ import xmltodict
 import requests
 
 # get_atdw_products - get products from a list in a csv
+# run 
+# pip install -r requirements.txt
+# then you can run
+# python ./get_atdw_products.py
 
 # Pagination params - http://developer.atdw.com.au/ATLAS/API/ATDWO-search.html#pgesize
 PAGE_SIZE = 100
