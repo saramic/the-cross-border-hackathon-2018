@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :fx_rates, only: %w(show index)
   resources :locations, only: %w(show)
   resources :alipay, only: :show
+  resources :clarifai, only: :index
 end
