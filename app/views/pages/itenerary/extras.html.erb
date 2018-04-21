@@ -21,24 +21,39 @@
     <h2 class="text-center">Extras</h2>
 
     <div class="col-md-12">
-      <div class="row" style="height: 150px;">
-        <img src="https://www.nab.com.au/content/dam/nabcampaigns/personal/credit-cards/rewards/v5/assets/img/layout/sticky-nav-logo.png">
+      <div class="row" style="position: relative;height: 150px;text-align: center;color: white;background-color: #000000;">
+        <img src="https://www.nab.com.au/content/dam/nabcampaigns/personal/credit-cards/rewards/v5/assets/img/layout/sticky-nav-logo.png" style="width:100%; opacity: 0.5;">
+        <div class="centered" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+          <h4>Create a NAB Account <i class="fa fa fa-plus"></i></h4>
+        </div>
       </div>
-      <p>Create a NAB Account</p>
 
-      <div class="row" style="height: 150px;">
-        <img src="https://journalistontherun.com/wp-content/uploads/2014/06/the-importance-of-travel-insurance.jpg">
-      </div>
-      <p>Sign up now for travel money</p>
+      <br>
 
-      <div class="row" style="height: 150px;">
-        <img src="https://secure.i.telegraph.co.uk/multimedia/archive/02002/travel-insurance_2002428b.jpg">
+      <div class="row" style="position: relative;height: 150px;text-align: center;color: white;background-color: #000000;">
+        <img src="https://journalistontherun.com/wp-content/uploads/2014/06/the-importance-of-travel-insurance.jpg" style="width:100%; opacity: 0.5;">
+        <div class="centered" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+          <h4 class="value-button" id="increase" onclick="increaseTravelMoney()" value="Increase Value">Get $300 credit in Travel Money <i class="fa fa fa-plus"></i></h4>
+        </div>
       </div>
-      <p>Get your trip insured today</p>
 
-      <div class="row">
-        <p>Estimate $10,200</p>
+      <br>
+
+      <div class="row" style="position: relative;height: 150px;text-align: center;color: white;background-color: #000000;">
+        <img src="https://secure.i.telegraph.co.uk/multimedia/archive/02002/travel-insurance_2002428b.jpg" style="width:100%; opacity: 0.5;">
+        <div class="centered" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+          <h4 class="value-button" id="increase" onclick="increaseInsurance()" value="Increase Value">Get your trip insured today <i class="fa fa fa-plus"></i></h4>
+        </div>
       </div>
+
+      <form>
+        <div class="form-group row">
+          <label for="estimate" class="col-xs-2 col-form-label">Estimate $</label>
+          <div class="col-xs-10">
+            <input type="number" readonly class="form-control-plaintext" id="number" value="10000">
+          </div>
+        </div>
+      </form>
 
       <div class="row">
         <div class="btn-group" style="display: block;width: 100%;">
@@ -48,3 +63,19 @@
     </div>
   </div>
 </div>
+
+<script>
+  function increaseTravelMoney() {
+      var value = parseInt(document.getElementById('number').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value++;
+      document.getElementById('number').value = value+299;
+  }
+
+  function increaseInsurance() {
+      var value = parseInt(document.getElementById('number').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value++;
+      document.getElementById('number').value = value+99;
+  }
+</script>
