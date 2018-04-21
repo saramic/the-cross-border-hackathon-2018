@@ -39,7 +39,7 @@ module Alipay
           out_trade_no: out_trade_no,
           timestamp: Time.now.getlocal('+08:00').strftime('%F %T') # TODO do this right on sign and send?
       )
-      response = ::AlipayRequest.get(params)
+      response = Alipay::Request.get(params)
       Precreate.new(response)
     end
 

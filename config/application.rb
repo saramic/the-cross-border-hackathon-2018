@@ -25,8 +25,6 @@ module BasicRails
     config.load_defaults 5.1
     config.generators.system_tests = nil
 
-    config.autoload_paths += %W(#{config.root}/lib/nab_sandbox)
-    config.autoload_paths += %W(#{config.root}/lib/alipay)
     config.autoload_paths += %W(#{config.root}/app/services)
   end
 end
