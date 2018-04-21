@@ -27,15 +27,15 @@ export default class HelloWorld extends React.Component {
 
   render() {
     return <div className="hello-world-container">
-        <div className="map-container">
+        {/*<div className="map-container">*/}
           <MapContainer />
-        </div>
-        <h3>Hello, {this.state.name}!</h3>
-        <hr />
-        <form>
-          <label htmlFor="name">Say hello to:</label>
-          <input id="name" type="text" value={this.state.name} onChange={e => this.updateName(e.target.value)} />
-        </form>
+        {/*</div>*/}
+        {/*<h3>Hello, {this.state.name}!</h3>*/}
+        {/*<hr />*/}
+        {/*<form>*/}
+          {/*<label htmlFor="name">Say hello to:</label>*/}
+          {/*<input id="name" type="text" value={this.state.name} onChange={e => this.updateName(e.target.value)} />*/}
+        {/*</form>*/}
       </div>
   }
 }
