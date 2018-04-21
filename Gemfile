@@ -42,6 +42,9 @@ gem 'jquery-rails'
 gem "react_on_rails", "~> 6"
 gem 'mini_racer', platforms: :ruby
 
+# clarifai
+gem 'clarifai_ruby'
+
 group :development do
   gem "listen"
   gem "rack-mini-profiler", require: false
