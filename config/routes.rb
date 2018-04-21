@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   root 'high_voltage/pages#show', id: 'root'
 
   resources :fx_rates, only: %w(show index)
+  resources :locations, only: %w(show)
   resources :alipay, only: :show
 end
