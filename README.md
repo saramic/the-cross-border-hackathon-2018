@@ -1,5 +1,7 @@
 # The Cross-Border Hackathon
 
+everyone should lolcommit
+
 Demo repo for ideas and proof of concepts around the April 2018 Hackathon
 presented by Stone & Chalk in conjunction with NAB and Alibaba Cloud.
 
