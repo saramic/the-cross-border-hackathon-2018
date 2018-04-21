@@ -11,6 +11,10 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+.hello-world-container > div > div {
+  height: 300px !important;
+}
+
 //@import "page-postcard";
 
 //@import "map-container";
