@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react'
+import MapContainer from './MapContainer/MapContainer.jsx'
+
 
 export default class HelloWorld extends React.Component {
   static propTypes = {
@@ -23,24 +26,16 @@ export default class HelloWorld extends React.Component {
   };
 
   render() {
-    return (
-      <div>
-        <h3>
-          Hello, {this.state.name}!
-        </h3>
+    return <div className="hello-world-container">
+        <div className="map-container">
+          <MapContainer />
+        </div>
+        <h3>Hello, {this.state.name}!</h3>
         <hr />
-        <form >
-          <label htmlFor="name">
-            Say hello to:
-          </label>
-          <input
-            id="name"
-            type="text"
-            value={this.state.name}
-            onChange={(e) => this.updateName(e.target.value)}
-          />
+        <form>
+          <label htmlFor="name">Say hello to:</label>
+          <input id="name" type="text" value={this.state.name} onChange={e => this.updateName(e.target.value)} />
         </form>
       </div>
-    );
   }
 }
