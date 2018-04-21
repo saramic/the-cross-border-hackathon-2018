@@ -25,31 +25,31 @@ with open('terms.csv', "rU") as file:
     )
     for row in reader:
         for column in row:
-            terms.append(column)
+            if len(column) != 0:
+                terms.append(column)
 
-
-for term in terms:
-    url = "http://atlas.atdw-online.com.au/api/atlas/products?key={}&term={}&size={}".format(API_KEY, terms[0], PAGE_SIZE)
-    payload = {}
-
-    response = requests.get(url, data=json.dumps(payload))
-
-    response = xmltodict.parse(
-        response.text,
+with open('atdw_products.csv', 'wb') as csvfile:
+    writer = csv.writer(
+        csvfile,
+        delimiter=str(u',').encode('utf-8'),
+        quotechar=str(u'"').encode('utf-8'),
+        quoting=csv.QUOTE_MINIMAL
     )
 
-    number_of_results = response['atdw_search_response']['number_of_results']
-    products = response['atdw_search_response']['products']['product_record']
+    writer.writerow(["id","image_url"])
 
-    with open('atdw_products.csv', 'wb') as csvfile:
-        writer = csv.writer(
-            csvfile,
-            delimiter=str(u',').encode('utf-8'),
-            quotechar=str(u'"').encode('utf-8'),
-            quoting=csv.QUOTE_MINIMAL
+    for term in terms:
+        url = "http://atlas.atdw-online.com.au/api/atlas/products?key={}&term={}&size={}".format(API_KEY, terms[0], PAGE_SIZE)
+        payload = {}
+
+        response = requests.get(url, data=json.dumps(payload))
+
+        response = xmltodict.parse(
+            response.text,
         )
 
-        writer.writerow(["id","image_url"])
+        number_of_results = response['atdw_search_response']['number_of_results']
+        products = response['atdw_search_response']['products']['product_record']
 
         for product in products:
             # for debugging
