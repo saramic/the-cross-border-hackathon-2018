@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :locations, only: %w(show)
   resources :alipay, only: :show
   resources :clarifai, only: :index
+  resources :image_search, only: %w(index create)
 end
