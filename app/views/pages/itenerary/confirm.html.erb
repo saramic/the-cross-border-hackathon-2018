@@ -25,12 +25,9 @@
         <div class="col-md-12">
           <div class="col-md-12" >
             <div class="row">
-              <div style="height:320px;border:1px solid #000;width:100%;display: table-cell;vertical-align: middle;text-align: center;">
-                <div id="confirm-spinner" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%); font-size: 60px;">
-                  <i class="fa fa fa-spinner fa-spin" style="z-index: -1;"></i>
-                </div>
+              <div style="height:320px;width:100%;display: table-cell;vertical-align: middle;text-align: center;">
                 <div>
-                  <img id="qr_code" style="margin-top: -10px;" src="https://postcard-holidays.herokuapp.com/alipay/123456785432">
+                  <%= image_tag("alipay.png", :alt => "rss feed") %>
                 </div>
               </div>
             </div>
@@ -94,20 +91,3 @@
   }
 </style>
 
-<script>
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     alert("Page is loaded");
-    //     document.getElementById('confirm-spinner').style.display = 'none';
-    // }, false);
-
-    // function myFunction() {
-    //   // document.getElementById('qr_code').style.display = 'none';
-    //   // document.getElementById('confirm-spinner').style.display = 'block';
-    //   setTimeout(function(){
-    //       // document.getElementById('qr_code').style.display = 'none';
-    //       document.getElementById('confirm-spinner').style.display = 'none';
-    //     },
-    //     3000);
-    //
-    // }
-</script>
