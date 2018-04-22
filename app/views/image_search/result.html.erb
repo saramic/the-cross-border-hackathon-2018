@@ -1,0 +1,12 @@
+<!--
+<%= @image_urls %>
+<%= @tags %>
+-->
+
+<div class="row">
+  <% @images.each do |image| %>
+    <div class="col-md-4">
+      <%= image_tag image, height: '210px' %>
+    </div>
+  <% end %>
+</div>

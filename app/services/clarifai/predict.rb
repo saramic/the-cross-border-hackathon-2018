@@ -9,8 +9,11 @@ module Clarifai
       Predict.new(JSON.parse(response.body))
     end
 
+    attr_reader :response
+
     def initialize(response)
       @data = response['outputs'][0]['data'] # TODO only first do multiple
+      @response = response
     end
 
     def concepts
