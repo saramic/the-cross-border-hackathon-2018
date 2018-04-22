@@ -1,71 +1,53 @@
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
-      <h3 class="masthead-brand">Postcard Holidays</h3>
       <nav class="nav nav-masthead justify-content-center">
         <%= link_to "Home", root_path, class: [:'nav-link'] %>
-        <%= link_to "About", page_path('about'), class: [:'nav-link'] %>
+        <%= link_to "1", page_path('one'), class: [:'nav-link'] %>
+        <%= link_to "2", page_path('two'), class: [:'nav-link'] %>
+        <%= link_to "3", page_path('three'), class: [:'nav-link'] %>
+        <%= link_to "Demo", image_search_index_path, class: [:'nav-link'] %>
         <%= link_to "Value", page_path('value'), class: [:'nav-link', :active] %>
-        <%= link_to "Demo", page_path('demo'), class: [:'nav-link'] %>
+        <%= link_to "Thanks", page_path('value'), class: [:'nav-link'] %>
+        <%= link_to "End", page_path('value'), class: [:'nav-link'] %>
       </nav>
     </div>
   </header>
 
   <div class="row mb-2">
-    <div class="col-md-6">
-      <h3>Australia</h3>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h3>Ali Cloud</h3>
       <ul>
-        <li>natural beauty</li>
-        <li>open spaces</li>
-        <li>amazing creatures</li>
-        <li>fresh air</li>
+        <li>Hosting</li>
+        <li>Image categroisation cluster</li>
       </ul>
     </div>
-    <div class="col-md-6"></div>
+    <div class="col-md-2"></div>
   </div>
 
   <div class="row mb-2">
-    <div class="col-md-6"></div>
-    <div class="col-md-6">
-      <h3>China</h3>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h3>NAB</h3>
       <ul>
-        <li>Growning middle class</li>
-        <li>Geographicaly close to Australia</li>
-        <li>World travellers</li>
-        <li>Looking for exeriences</li>
+        <li>Tourist Card - idea based on brainstorming with NAB mentors</li>
+        <li>Conversion Rates calculation</li>
+        <li>NAB ATM locations</li>
       </ul>
     </div>
+    <div class="col-md-2"></div>
   </div>
 
   <div class="row mb-2">
-    <div class="col-md-6">
-      <h3>Tourism Operators</h3>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h3>Ali Pay</h3>
       <ul>
-        <li>Know how to create amazing holiday experiences</li>
-        <li>Limited in technology</li>
-        <li>Prefer credit card for payment options</li>
-    </div>
-    <div class="col-md-6"></div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-6"></div>
-    <div class="col-md-6">
-      <h3>Modern Economy Partners</h3>
-      <ul>
-        <li>NAB</li>
-        <li>Alipay</li>
-        <li>QR codes</li>
+        <li>QR payment integration</li>
       </ul>
     </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-12">
-      <p class="lead">
-        <%= link_to "Show me a demo", page_path('demo'), class: [:btn, :'btn-lg', :'btn-secondary'] %>
-      </p>
-    </div>
+    <div class="col-md-2"></div>
   </div>
 
   <footer class="mastfoot mt-auto">
