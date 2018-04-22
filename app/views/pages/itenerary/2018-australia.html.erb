@@ -18,30 +18,49 @@
 
 <div class="container" style="margin-top: 30px;">
   <div class="container-fluid">
-    <h2 class="text-center">2018 Australia</h2>
+      <div class="col-md-6 offset-md-3">
 
-    <div class="col-md-12">
+        <h2 class="text-center">2018 Australia</h2>
 
-      <div class="row">
-        <div class="col-4">
-          <img src="http://www.surfresearch.com.au/rPC1995_Kangaroo.jpg">
+        <div class="row">
+          <div class="col-4">
+            <div class="row" style="position: relative;height: 120px;text-align: center;color: white;background-color: #000000;border: 3px solid #32CD32">
+              <img src="http://www.surfresearch.com.au/rPC1995_Kangaroo.jpg" style="width:100%; opacity: 0.5;">
+              <div class="centered" style="position: absolute;top: 60%;left: 50%;transform: translate(-50%, -50%);">
+                <h6>Surfing Experience</h6>
+                <p>123 Fake St Cairns <i class="fa fa fa-map-marker"></i></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="row" style="position: relative;height: 120px;text-align: center;color: white;background-color: #000000;">
+              <img src="http://1.bp.blogspot.com/-ymbc1C_H3w8/TwQgMGh62LI/AAAAAAAAACQ/iwv4IHRDVq4/s1600/xmas-surfer.jpg" style="width:100%; opacity: 0.8;">
+              <div class="centered" style="position: absolute;top: 60%;left: 50%;transform: translate(-50%, -50%);">
+                <h6>Another Experience</h6>
+                <p>123 Fake Ave Melbourne <i class="fa fa fa-map-marker"></i></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="row" style="position: relative;height: 120px;text-align: center;color: white;background-color: #000000;">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5cP6y1qdq3ynHhweJw9a7FVYxkAOJJ_rvWUHPg1yh6SXLgSrL" style="width:100%; opacity: 0.8;">
+              <div class="centered" style="position: absolute;top: 60%;left: 50%;transform: translate(-50%, -50%);">
+                <h6>Another Experience</h6>
+                <p>123 Fake Ave Melbourne <i class="fa fa fa-map-marker"></i></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-4">
-          <img src="http://1.bp.blogspot.com/-ymbc1C_H3w8/TwQgMGh62LI/AAAAAAAAACQ/iwv4IHRDVq4/s1600/xmas-surfer.jpg">
-        </div>
-        <div class="col-4">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5cP6y1qdq3ynHhweJw9a7FVYxkAOJJ_rvWUHPg1yh6SXLgSrL">
+
+        <br>
+
+        <div class="row">
+          <div style="max-height:400px;width:100%;display: table-cell;vertical-align: middle;text-align: center;">
+            <%= react_component("HelloWorld", props: @hello_world_props, prerender: false) %>
+          </div>
         </div>
       </div>
-
-      <br>
-
-      <div class="row">
-        <div style="height:300px;border:1px solid #000;width:100%;display: table-cell;vertical-align: middle;text-align: center;">
-          <%= react_component("HelloWorld", props: @hello_world_props, prerender: false) %>
-        </div>
-      </div>
-
-    </div>
   </div>
 </div>
