@@ -1,66 +1,68 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Postcard Holidays</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead">
+    <div class="inner">
+      <nav class="nav nav-masthead justify-content-center">
+        <%= link_to "Home", root_path, class: [:'nav-link'] %>
+        <%= link_to "1", page_path('one'), class: [:'nav-link'] %>
+        <%= link_to "2", page_path('two'), class: [:'nav-link'] %>
+        <%= link_to "3", page_path('three'), class: [:'nav-link'] %>
+        <%= link_to "Demo", image_search_index_path, class: [:'nav-link', :active] %>
+        <%= link_to "Value", page_path('value'), class: [:'nav-link'] %>
+        <%= link_to "Thanks", page_path('value'), class: [:'nav-link'] %>
+        <%= link_to "End", page_path('value'), class: [:'nav-link'] %>
+      </nav>
+    </div>
+  </header>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link"><%= link_to "Plan a NEW Trip", page_path('itenerary/find_my_holiday'), class: [:'nav-link'] %></a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <div class="container" style="margin-top: 30px;">
+    <div class="container-fluid">
+      <div class="col-md-8 offset-md-2" style="border: 1px solid #000;height: 700px;padding: 40px;">
 
-<div class="container" style="margin-top: 30px;">
-  <div class="container-fluid">
-    <div class="col-md-6 offset-md-3">
+        <h2 class="text-center">Extras</h2>
 
-      <h2 class="text-center">Extras</h2>
-
-      <div class="col-md-12">
-        <div class="row" style="position: relative;height: 150px;text-align: center;color: white;background-color: #000000;">
-          <img src="https://www.nab.com.au/content/dam/nabcampaigns/personal/credit-cards/rewards/v5/assets/img/layout/sticky-nav-logo.png" style="width:100%; opacity: 0.5;">
-          <div class="centered" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
-            <h4>Create a NAB Account <i class="fa fa fa-plus"></i></h4>
+        <div class="col-md-12">
+          <div class="row" style="position: relative;height: 150px;text-align: center;color: white;background-color: #000000;">
+            <img src="https://www.nab.com.au/content/dam/nabcampaigns/personal/credit-cards/rewards/v5/assets/img/layout/sticky-nav-logo.png" style="width:100%; opacity: 0.5;">
+            <div class="centered" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+              <h5>Create a NAB Account <i class="fa fa fa-plus"></i></h5>
+            </div>
           </div>
-        </div>
 
-        <br>
+          <br>
 
-        <div class="row" style="position: relative;height: 150px;text-align: center;color: white;background-color: #000000;">
+          <div class="row" style="position: relative;height: 150px;text-align: center;color: white;background-color: #000000;">
             <img id="insurance" src="https://journalistontherun.com/wp-content/uploads/2014/06/the-importance-of-travel-insurance.jpg" style="width:100%; opacity: 0.5;">
             <div class="centered" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
-              <h4 class="value-button" id="increase" onclick="increaseTravelMoney()" value="Increase Value">Get $300
-                credit in Travel Money <i class="fa fa fa-plus"></i></h4>
+              <h5 class="value-button" id="increase" onclick="increaseTravelMoney()" value="Increase Value">Get $300
+                credit in Travel Money <i class="fa fa fa-plus"></i></h5>
             </div>
-          <div id="insurance-spinner" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%); font-size: 60px; display: none"><i class="fa fa fa-spinner fa-spin"></i>
-          </div>
-        </div>
-
-        <br>
-
-        <div class="row" style="position: relative;height: 150px;text-align: center;color: white;background-color: #000000;">
-          <img src="https://secure.i.telegraph.co.uk/multimedia/archive/02002/travel-insurance_2002428b.jpg" style="width:100%; opacity: 0.5;">
-          <div class="centered" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
-            <h4 class="value-button" id="increase" onclick="increaseInsurance()" value="Increase Value">Get your trip
-              insured today <i class="fa fa fa-plus"></i></h4>
-          </div>
-        </div>
-
-        <form>
-          <div class="form-group row">
-            <label for="estimate" class="col-xs-2 col-form-label">Estimate $</label>
-            <div class="col-xs-10">
-              <input type="number" readonly class="form-control-plaintext" id="number" value="10000">
+            <div id="insurance-spinner" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%); font-size: 60px; display: none"><i class="fa fa fa-spinner fa-spin"></i>
             </div>
           </div>
-        </form>
 
-        <div class="row">
-          <div class="btn-group" style="display: block;width: 100%;">
-            <%= link_to "Confirm", page_path('itenerary/confirm'), class: 'btn btn-large btn-primary btn-block' %>
+          <br>
+
+          <div class="row" style="position: relative;height: 150px;text-align: center;color: white;background-color: #000000;">
+            <img src="https://secure.i.telegraph.co.uk/multimedia/archive/02002/travel-insurance_2002428b.jpg" style="width:100%; opacity: 0.5;">
+            <div class="centered" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+              <h5 class="value-button" id="increase" onclick="increaseInsurance()" value="Increase Value">Get your trip
+                insured today <i class="fa fa fa-plus"></i></h5>
+            </div>
+          </div>
+
+          <form>
+            <div class="form-group row">
+              <label for="estimate" class="col-xs-2 col-form-label">Estimate $</label>
+              <div class="col-xs-10">
+                <input type="number" readonly class="form-control-plaintext" id="number" value="10000">
+              </div>
+            </div>
+          </form>
+
+          <div class="row">
+            <div class="btn-group" style="display: block;width: 100%;">
+              <%= link_to "Confirm", page_path('itenerary/confirm'), class: 'btn btn-large btn-primary btn-block' %>
+            </div>
           </div>
         </div>
       </div>
