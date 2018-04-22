@@ -7,9 +7,6 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">My Itineraries</a>
-      </li>
-      <li class="nav-item active">
         <a class="nav-link"><%= link_to "Plan a NEW Trip", page_path('itenerary/find_my_holiday'), class: [:'nav-link'] %></a>
       </li>
     </ul>
@@ -24,11 +21,15 @@
 
       <h3 class="text-center">$10,200.00</h3>
 
-      <div class="col-md-12">
+      <div class="col-md-12" >
         <div class="row">
-          <div style="height:300px;border:1px solid #000;width:100%;display: table-cell;vertical-align: middle;text-align: center;">
-
-            <%= render '/pages/itenerary/partial' %>
+          <div style="height:400px;border:1px solid #000;width:100%;display: table-cell;vertical-align: middle;text-align: center;">
+            <div id="confirm-spinner" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%); font-size: 60px;">
+              <i class="fa fa fa-spinner fa-spin" style="z-index: -1;"></i>
+            </div>
+            <div>
+              <img id="qr_code" style="margin-top: -10px;" src="https://postcard-holidays.herokuapp.com/alipay/123456785432">
+            </div>
           </div>
         </div>
       </div>
@@ -37,23 +38,71 @@
 
       <div class="row">
         <div class="col-4">
-          <img src="http://www.surfresearch.com.au/rPC1995_Kangaroo.jpg">
+          <div class="row" style="position: relative;height: 120px;text-align: center;color: white;background-color: #000000;">
+            <img src="http://www.surfresearch.com.au/rPC1995_Kangaroo.jpg" style="width:100%; opacity: 0.5;">
+            <div class="centered" style="position: absolute;top: 60%;left: 50%;transform: translate(-50%, -50%);">
+              <h6>Surfing Experience</h6>
+              <p>123 Fake St Cairns <i class="fa fa fa-map-marker"></i></p>
+            </div>
+          </div>
         </div>
+
         <div class="col-4">
-          <img src="http://1.bp.blogspot.com/-ymbc1C_H3w8/TwQgMGh62LI/AAAAAAAAACQ/iwv4IHRDVq4/s1600/xmas-surfer.jpg">
+          <div class="row" style="position: relative;height: 120px;text-align: center;color: white;background-color: #000000;">
+            <img src="http://1.bp.blogspot.com/-ymbc1C_H3w8/TwQgMGh62LI/AAAAAAAAACQ/iwv4IHRDVq4/s1600/xmas-surfer.jpg" style="width:100%; opacity: 0.8;">
+            <div class="centered" style="position: absolute;top: 60%;left: 50%;transform: translate(-50%, -50%);">
+              <h6>Another Experience</h6>
+              <p>123 Fake Ave Melbourne <i class="fa fa fa-map-marker"></i></p>
+            </div>
+          </div>
         </div>
+
         <div class="col-4">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5cP6y1qdq3ynHhweJw9a7FVYxkAOJJ_rvWUHPg1yh6SXLgSrL">
+          <div class="row" style="position: relative;height: 120px;text-align: center;color: white;background-color: #000000;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5cP6y1qdq3ynHhweJw9a7FVYxkAOJJ_rvWUHPg1yh6SXLgSrL" style="width:100%; opacity: 0.8;">
+            <div class="centered" style="position: absolute;top: 60%;left: 50%;transform: translate(-50%, -50%);">
+              <h6>Another Experience</h6>
+              <p>123 Fake Ave Melbourne <i class="fa fa fa-map-marker"></i></p>
+            </div>
+          </div>
         </div>
       </div>
 
       <br>
 
       <div class="row">
-        <div class="btn-group" style="display: block;width: 100%;">
-          <%= link_to "Pay", page_path('itenerary/done'), class: 'btn btn-large btn-primary btn-block' %>
-        </div>
+        <!--<div class="btn-group" style="display: block;width: 100%;" id="confirm-spinner" onclick="confirmBooking()">-->
+          <%= link_to "Next", page_path('itenerary/done'), class: 'hidden-white-text' %>
+        <!--</div>-->
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  .hidden-white-text {
+    color: #fff;
+  }
+
+  .hidden-white-text a {
+    color: #fff;
+  }
+</style>
+
+<script>
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     alert("Page is loaded");
+    //     document.getElementById('confirm-spinner').style.display = 'none';
+    // }, false);
+
+    // function myFunction() {
+    //   // document.getElementById('qr_code').style.display = 'none';
+    //   // document.getElementById('confirm-spinner').style.display = 'block';
+    //   setTimeout(function(){
+    //       // document.getElementById('qr_code').style.display = 'none';
+    //       document.getElementById('confirm-spinner').style.display = 'none';
+    //     },
+    //     3000);
+    //
+    // }
+</script>

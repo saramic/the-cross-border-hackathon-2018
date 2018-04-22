@@ -1,0 +1,28 @@
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <nav class="nav nav-masthead justify-content-center">
+        <%= link_to "Home", root_path, class: [:'nav-link'] %>
+        <%= link_to "Persona 1", page_path('one'), class: [:'nav-link', :active] %>
+        <%= link_to "Persona 2", page_path('two'), class: [:'nav-link'] %>
+        <%= link_to "Persona 3", page_path('three'), class: [:'nav-link'] %>
+        <%= link_to "Value", page_path('value'), class: [:'nav-link'] %>
+        <%= link_to "Demo", page_path('demo'), class: [:'nav-link'] %>
+      </nav>
+    </div>
+  </header>
+
+  <h3>Persona 1</h3>
+  <div class="row">
+
+    <div class="col-md-6">Image</div>
+    <div class="col-md-6">Image</div>
+  </div>
+
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p></p>
+    </div>
+  </footer>
+</div>

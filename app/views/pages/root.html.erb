@@ -1,24 +1,61 @@
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="background-image: url(http://blog.mayfairhotels.com/wp-content/uploads/2016/02/Goa-Beach.jpg);background-repeat: no-repeat;">
   <header class="masthead mb-auto">
     <div class="inner">
-      <h3 class="masthead-brand">Postcard Holidays</h3>
       <nav class="nav nav-masthead justify-content-center">
         <%= link_to "Home", root_path, class: [:'nav-link', :active] %>
-        <%= link_to "About", page_path('about'), class: [:'nav-link'] %>
+        <%= link_to "1", page_path('one'), class: [:'nav-link'] %>
+        <%= link_to "2", page_path('two'), class: [:'nav-link'] %>
+        <%= link_to "3", page_path('three'), class: [:'nav-link'] %>
+        <%= link_to "Demo", image_search_index_path, class: [:'nav-link'] %>
         <%= link_to "Value", page_path('value'), class: [:'nav-link'] %>
-        <%= link_to "Demo", page_path('demo'), class: [:'nav-link'] %>
+        <%= link_to "Thanks", page_path('value'), class: [:'nav-link'] %>
+        <%= link_to "End", page_path('value'), class: [:'nav-link'] %>
       </nav>
     </div>
   </header>
 
   <main role="main" class="inner cover">
-    <h1 class="cover-heading">Welcome to Postcard Holidays</h1>
-    <p class="lead">If you have no idea of the holiday you want, just send us
-    the last few images of your friends holiday and we will match it image by
-    image so you too can be popular on The Gram.</p>
-    <p class="lead">
-      <%= link_to "let's get started", page_path('about'), class: [:btn, :'btn-lg', :'btn-secondary'] %>
-    </p>
+    <h1 class="cover-heading text-center">Postcard Holidays</h1>
+
+    <br>
+
+    <div class="row mb-2">
+      <div class="col-md-6"></div>
+      <div class="col-md-6 text-right">
+        <h3>Development Team</h3>
+        <ul>
+          <li>Jake Barber</li>
+          <li>Michael Milewski</li>
+          <li>Selena Small</li>
+          <li>Yen</li>
+        </ul>
+      </div>
+    </div>
+
+    <!--<div class="row mb-2">-->
+      <!--<div class="col-md-6"></div>-->
+      <!--<div class="col-md-6">-->
+        <!--<h3>The build</h3>-->
+        <!--<ul>-->
+          <!--<li>Image recognition dataset (Ali cloud)</li>-->
+          <!--<li>Image searh microservice (Ali cloud)</li>-->
+          <!--<li>Booking and itinerary system (NAB API)</li>-->
+          <!--<li>Payment transfer system (Alipay &amp; NAB API)</li>-->
+        <!--</ul>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="row mb-2">-->
+      <!--<div class="col-md-6">-->
+        <!--<h3>Partners</h3>-->
+        <!--<ul>-->
+          <!--<li>NAB API</li>-->
+          <!--<li>Alipay</li>-->
+          <!--<li>Ali cloud</li>-->
+        <!--</ul>-->
+      <!--</div>-->
+      <!--<div class="col-md-6"></div>-->
+    <!--</div>-->
   </main>
 
   <footer class="mastfoot mt-auto">
